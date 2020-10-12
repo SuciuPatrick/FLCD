@@ -3,7 +3,16 @@
 =
 (
 )
-;
+:
+
+while
+return
+print
+for
 if
 else
-
+in
+{
+}
+identifier 0
+constants 1

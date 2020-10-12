@@ -1,0 +1,24 @@
+The words - predefined tokens are specified between " and ":
+
+Sintactical rules: (file Syntax.in)
+
+decllist ::= declaration | declaration ";" decllist
+type1 ::= "Integer" | "String" | "List" | "Array"
+declaration ::= Type variable_name = constant
+arraydecl ::= "Array" "[" nr "]" "OF" type1
+type  ::= type1|arraydecl
+cmpdstmt ::= { } # we use curly brackets
+stmtlist ::= stmt | stmt ";" stmtlist
+stmt ::= simplstmt | structstmt
+simplstmt ::= assignstmt | iostmt
+assignstmt ::= IDENTIFIER "=" expression
+expression ::= expression "+" term | term
+term ::= term "*" factor | factor
+factor ::= "(" expression ")" | IDENTIFIER
+iostmt ::= "READ" | "WRITE" "(" IDENTIFIER ")"
+structstmt ::= cmpdstmt | ifstmt | whilestmt
+ifstmt ::= "if" condition: '\n' stmt ["else": stmt]
+whilestmt ::= "while" condition: stmt
+condition ::= expression RELATION expression
+RELATION ::= "<" | "<=" | "=" | "<>" | ">=" | ">"
+
