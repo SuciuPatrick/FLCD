@@ -1,5 +1,3 @@
-The words - predefined tokens are specified between " and ":
-
 Sintactical rules: (file Syntax.in)
 
 decllist ::= declaration | declaration ";" decllist
@@ -21,4 +19,3 @@ ifstmt ::= "if" condition: '\n' stmt ["else": stmt]
 whilestmt ::= "while" condition: stmt
 condition ::= expression RELATION expression
 RELATION ::= "<" | "<=" | "=" | "<>" | ">=" | ">"
-

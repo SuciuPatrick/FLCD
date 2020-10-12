@@ -6,7 +6,7 @@ Alphabet:
 Lexic:
       a.Special symbols, representing:
 
-            - operators + - * / := < <= = >=
+            - operators + - * / = < <= = >=
 
             - separators ( ) [ ] { } " " ' ' space
 
@@ -15,20 +15,20 @@ Lexic:
 
       b.identifiers
           - a sequence of letters and  digits, such that the first character is a letter; the rule is:
-            identifier = letter | letter{letter}{digit}
+            identifier := letter | letter{letter}{digit}
 
-            letter = "A" | "B" | . ..| "Z" or "a" | "b" | ... | "z"
-            digit = "0" | "1" |...| "9"
+            letter := "A" | "B" | . ..| "Z" or "a" | "b" | ... | "z"
+            digit := "0" | "1" |...| "9"
 
       c.constants
 
 1.integer - rule:
-      number = "+"no|"-"no|no
-      number =digit
+      number := "+"no|"-"no|no
+      number :=digit
 
 2.character
     character:='letter'|'digit'
 
 
 3.string
-      string = "string|digit|ascii characters"
+      string := "string|digit|ascii characters"
