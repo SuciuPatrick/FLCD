@@ -17,9 +17,8 @@ class Scanner:
         if token:
             return token
 
-    # check for words like intANA
     def is_reserved_keyword(self, token):
-        token = re.match(r'integer|bool|char|list|if|else|for|while|print', token)
+        token = re.match(r'(integer|bool|char|list|if|else|for|while|print)$', token)
         if token:
             return token
 
