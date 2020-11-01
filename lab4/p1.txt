@@ -1,0 +1,11 @@
+print("GCD" + a)
+
+integer a, b, c, result;
+
+while a != b:
+    if a > b:
+        a -= b
+    else:
+        b -= a
+
+print("GCD" + a)
