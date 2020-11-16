@@ -1,0 +1,11 @@
+letter = "A" | "B" | . ..| "Z" or "a" | "b" | ... | "z"
+digit = "0" | "1" |...| "9"
+character = letter | digit
+
+alphabet = letter {", " letter}
+state = letter {letter | digit}
+states = state {", " state}
+initial_state = state
+set_of_final_states = state {", " state}
+transition = state character state
+set_of_transitions = transition {"\n" transition}
